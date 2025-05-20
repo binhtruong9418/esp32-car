@@ -20,8 +20,14 @@ const int SPEED = 200; // Tốc độ mặc định
 char command;
 
 // Thông tin WiFi
-const char *ssid = "Binh Duc";         // THAY ĐỔI: Tên WiFi của bạn
-const char *password = "ducbinh203"; // THAY ĐỔI: Mật khẩu WiFi của bạn
+const char *ssid = "Đức Bình";     // THAY ĐỔI: Tên WiFi của bạn
+const char *password = "12345678"; // THAY ĐỔI: Mật khẩu WiFi của bạn
+
+// Cấu hình IP tĩnh - dùng cho mạng hotspot điện thoại
+IPAddress staticIP(172, 20, 10, 3); // Địa chỉ IP bạn muốn dùng
+IPAddress gateway(172, 20, 10, 1);  // Gateway (thường là IP của điện thoại phát WiFi)
+IPAddress subnet(255, 255, 255, 0); // Subnet mask cho mạng hotspot
+IPAddress dns(8, 8, 8, 8);          // DNS của Google
 
 // Cổng Web Server
 WebServer server(80);
